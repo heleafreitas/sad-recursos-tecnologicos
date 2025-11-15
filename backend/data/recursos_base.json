@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "nome": "GeoGebra",
+    "area": "Matemática",
+    "categoria": "Software de Matemática Dinâmica",
+    "descricao": "Geometria, álgebra e cálculo interativo com visualização dinâmica",
+    "facilidadeUso": 0.70,
+    "engajamentoPotencial": 0.85,
+    "adaptabilidadePedagogica": 0.90,
+    "requisitosInfraestrutura": 0.75,
+    "custoAcessibilidade": 1.0,
+    "tags": ["investigativo", "projetos", "introducao", "pratica", "hibrido"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador", "celular"],
+    "avaliacao": false,
+    "offline": true,
+    "referencias": [
+      "Hohenwarter, M., & Jones, K. (2007). Ways of linking geometry and algebra",
+      "Zengin, Y., & Tatar, E. (2017). Integrating dynamic mathematics software"
+    ]
+  },
+  {
+    "id": 2,
+    "nome": "Khan Academy",
+    "area": "Matemática",
+    "categoria": "Plataforma de Aprendizagem Adaptativa",
+    "descricao": "Videoaulas e exercícios com feedback automático e trilhas personalizadas",
+    "facilidadeUso": 0.90,
+    "engajamentoPotencial": 0.75,
+    "adaptabilidadePedagogica": 0.80,
+    "requisitosInfraestrutura": 0.60,
+    "custoAcessibilidade": 1.0,
+    "tags": ["autonomia", "revisao", "pratica", "expositivo"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador", "celular"],
+    "avaliacao": true,
+    "offline": false,
+    "referencias": [
+      "Nwosisi, C., et al. (2016). Study of the effectiveness of Khan Academy use",
+      "Murphy, R., et al. (2014). Investigating the efficacy of Khan Academy"
+    ]
+  },
+  {
+    "id": 3,
+    "nome": "Desmos",
+    "area": "Matemática",
+    "categoria": "Calculadora Gráfica Online",
+    "descricao": "Visualização interativa de funções, gráficos e simulações matemáticas",
+    "facilidadeUso": 0.85,
+    "engajamentoPotencial": 0.80,
+    "adaptabilidadePedagogica": 0.85,
+    "requisitosInfraestrutura": 0.70,
+    "custoAcessibilidade": 1.0,
+    "tags": ["investigativo", "introducao", "pratica", "hibrido"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador", "celular"],
+    "avaliacao": false,
+    "offline": false,
+    "referencias": [
+      "Crompton, H., et al. (2017). Mobile learning and student cognition",
+      "Rakes, C. R., et al. (2010). Methods of instructional improvement"
+    ]
+  },
+  {
+    "id": 4,
+    "nome": "Kahoot!",
+    "area": "Multidisciplinar",
+    "categoria": "Gamificação e Quiz",
+    "descricao": "Quizzes competitivos em tempo real com ranking e pontuação",
+    "facilidadeUso": 0.95,
+    "engajamentoPotencial": 0.95,
+    "adaptabilidadePedagogica": 0.75,
+    "requisitosInfraestrutura": 0.70,
+    "custoAcessibilidade": 0.85,
+    "tags": ["revisao", "expositivo", "hibrido"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["celular", "computador"],
+    "avaliacao": true,
+    "offline": false,
+    "referencias": [
+      "Wang, A. I., & Tahir, R. (2020). The effect of using Kahoot! for learning",
+      "Licorish, S. A., et al. (2018). Students' perception of Kahoot!"
+    ]
+  },
+  {
+    "id": 5,
+    "nome": "Google Docs",
+    "area": "Redação",
+    "categoria": "Editor Colaborativo",
+    "descricao": "Escrita colaborativa em tempo real com comentários e sugestões",
+    "facilidadeUso": 0.90,
+    "engajamentoPotencial": 0.75,
+    "adaptabilidadePedagogica": 0.95,
+    "requisitosInfraestrutura": 0.65,
+    "custoAcessibilidade": 1.0,
+    "tags": ["projetos", "pratica", "autonomia", "hibrido"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador", "celular"],
+    "avaliacao": false,
+    "offline": true,
+    "referencias": [
+      "Zhou, W., et al. (2012). Using Google Docs to facilitate collaborative writing",
+      "Brodahl, C., et al. (2011). Collaboration using Google Docs"
+    ]
+  },
+  {
+    "id": 6,
+    "nome": "Mentimeter",
+    "area": "Multidisciplinar",
+    "categoria": "Enquetes em Tempo Real",
+    "descricao": "Perguntas interativas ao vivo com visualização instantânea de respostas",
+    "facilidadeUso": 0.95,
+    "engajamentoPotencial": 0.90,
+    "adaptabilidadePedagogica": 0.95,
+    "requisitosInfraestrutura": 0.70,
+    "custoAcessibilidade": 0.75,
+    "tags": ["expositivo", "introducao", "hibrido"],
+    "modalidades": ["presencial", "hibrida"],
+    "dispositivos": ["celular", "computador"],
+    "avaliacao": true,
+    "offline": false,
+    "referencias": [
+      "Gökbulut, B. (2020). The effect of Mentimeter and Kahoot applications",
+      "Little, C. (2016). Innovative polling techniques"
+    ]
+  },
+  {
+    "id": 7,
+    "nome": "Edpuzzle",
+    "area": "Multidisciplinar",
+    "categoria": "Vídeos Interativos",
+    "descricao": "Inserção de questões e comentários em vídeos com análise de dados",
+    "facilidadeUso": 0.85,
+    "engajamentoPotencial": 0.85,
+    "adaptabilidadePedagogica": 0.85,
+    "requisitosInfraestrutura": 0.65,
+    "custoAcessibilidade": 0.90,
+    "tags": ["autonomia", "introducao", "pratica", "expositivo"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador", "celular"],
+    "avaliacao": true,
+    "offline": false,
+    "referencias": [
+      "Rackaway, C. (2012). Video killed the textbook star",
+      "Kay, R. H. (2012). Exploring the use of video podcasts"
+    ]
+  },
+  {
+    "id": 8,
+    "nome": "PhET Simulations",
+    "area": "Física/Química/Biologia",
+    "categoria": "Simulações Científicas",
+    "descricao": "Laboratórios virtuais para experimentação em física, química e biologia",
+    "facilidadeUso": 0.80,
+    "engajamentoPotencial": 0.90,
+    "adaptabilidadePedagogica": 0.85,
+    "requisitosInfraestrutura": 0.75,
+    "custoAcessibilidade": 1.0,
+    "tags": ["investigativo", "introducao", "pratica", "projetos"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador"],
+    "avaliacao": false,
+    "offline": true,
+    "referencias": [
+      "Wieman, C. E., et al. (2008). PhET: Simulations that enhance learning",
+      "Perkins, K., et al. (2006). PhET interactive simulations"
+    ]
+  },
+  {
+    "id": 9,
+    "nome": "Padlet",
+    "area": "Multidisciplinar",
+    "categoria": "Mural Colaborativo",
+    "descricao": "Quadros virtuais para brainstorming, mapas mentais e projetos coletivos",
+    "facilidadeUso": 0.95,
+    "engajamentoPotencial": 0.85,
+    "adaptabilidadePedagogica": 0.90,
+    "requisitosInfraestrutura": 0.70,
+    "custoAcessibilidade": 0.80,
+    "tags": ["projetos", "pratica", "hibrido", "investigativo"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["celular", "computador"],
+    "avaliacao": false,
+    "offline": false,
+    "referencias": [
+      "Fuchs, B. (2014). The writing is on the wall: Using Padlet",
+      "Rashid, A. A., et al. (2019). The influence of Padlet"
+    ]
+  },
+  {
+    "id": 10,
+    "nome": "Quizlet",
+    "area": "Multidisciplinar",
+    "categoria": "Flashcards e Memorização",
+    "descricao": "Cartões de estudo com repetição espaçada e modos de jogo",
+    "facilidadeUso": 0.90,
+    "engajamentoPotencial": 0.80,
+    "adaptabilidadePedagogica": 0.85,
+    "requisitosInfraestrutura": 0.75,
+    "custoAcessibilidade": 0.85,
+    "tags": ["revisao", "autonomia", "pratica"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["celular", "computador"],
+    "avaliacao": true,
+    "offline": true,
+    "referencias": [
+      "Dizon, G. (2016). Quizlet in the EFL classroom",
+      "Sanosi, A. B. (2018). The effect of Quizlet on vocabulary acquisition"
+    ]
+  }
+]
