@@ -17,19 +17,19 @@ const Resultado = ({ ranking, analises, onNovaConsulta }) => {
           Análise do Sistema
         </h2>
         <div className="grid md:grid-cols-4 gap-4">
-          <div className="bg-white bg-opacity-20 rounded-lg p-4">
+          <div className="bg-white/10 rounded-lg p-4">
             <p className="text-sm opacity-90">Recursos Analisados</p>
             <p className="text-3xl font-bold">{analises.totalRecursos}</p>
           </div>
-          <div className="bg-white bg-opacity-20 rounded-lg p-4">
+          <div className="bg-white/10 rounded-lg p-4">
             <p className="text-sm opacity-90">Elegíveis</p>
             <p className="text-3xl font-bold">{analises.recursosElegiveis}</p>
           </div>
-          <div className="bg-white bg-opacity-20 rounded-lg p-4">
+          <div className="bg-white/10 rounded-lg p-4">
             <p className="text-sm opacity-90">Taxa de Filtragem</p>
             <p className="text-3xl font-bold">{analises.taxaFiltragem}%</p>
           </div>
-          <div className="bg-white bg-opacity-20 rounded-lg p-4">
+          <div className="bg-white/10 rounded-lg p-4">
             <p className="text-sm opacity-90">Critério Predominante</p>
             <p className="text-2xl font-bold">{analises.principalCriterio}</p>
           </div>
