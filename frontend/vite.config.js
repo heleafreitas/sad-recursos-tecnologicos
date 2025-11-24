@@ -8,7 +8,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: 'helenapi.perronedev.com.br',
+        target: 'https://helenapi.perronedev.com.br',
         changeOrigin: true
       }
     }
