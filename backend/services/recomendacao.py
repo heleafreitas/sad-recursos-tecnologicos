@@ -1,37 +1,30 @@
 """
-Serviço principal de recomendação
-Integra as três funções de análise de dados
+SERVIÇO PRINCIPAL DE RECOMENDAÇÃO - Integra as 3 funções
 """
-from config import Config
 from services.classificacao import ClassificadorRecursos
-from services.associacao import AnalisadorAssociacao
 from services.agrupamento import AgrupadorSimilaridade
+from services.regressao import RegressorPesos
+
 
 class SistemaRecomendacao:
-    """
-    Integra classificação, associação e agrupamento para gerar recomendações
-    """
+    """Integra classificação, agrupamento e regressão para gerar recomendações"""
     
     def __init__(self, respostas, recursos):
         self.respostas = respostas
         self.recursos = recursos
         
-        # Inicializa os três motores de análise
+        # Inicializa os três motores
         self.classificador = ClassificadorRecursos(respostas)
-        self.associador = AnalisadorAssociacao(respostas)
         self.agrupador = AgrupadorSimilaridade(respostas)
+        self.regressor = RegressorPesos()
     
     def gerar_recomendacoes(self):
-        """
-        Pipeline completo de recomendação
+        """Pipeline completo de recomendação"""
+        # ETAPA 1: Treina regressão para obter pesos
+        pesos = self.regressor.treinar_regressao(self.recursos)
         
-        Returns:
-            dict: Contém ranking e análises estatísticas
-        """
-        # ETAPA 1: Classificação - Filtra recursos elegíveis
-        recursos_elegiveis = self.classificador.filtrar_recursos_elegiveis(
-            self.recursos
-        )
+        # ETAPA 2: Classificação - Filtra recursos elegíveis
+        recursos_elegiveis = self.classificador.filtrar_recursos_elegiveis(self.recursos)
         
         if not recursos_elegiveis:
             return {
@@ -39,125 +32,89 @@ class SistemaRecomendacao:
                 'analises': {
                     'totalRecursos': len(self.recursos),
                     'recursosElegiveis': 0,
-                    'taxaFiltragem': 100.0,
-                    'mensagem': 'Nenhum recurso atende aos critérios especificados'
+                    'pesos_regressao': pesos,
+                    'metricas_regressao': self.regressor.obter_metricas()
                 }
             }
         
-        # ETAPA 2: Score individual para cada recurso elegível
+        # ETAPA 3: Agrupamento - Agrupa recursos elegíveis
+        clusters_info = self.agrupador.agrupar_recursos(recursos_elegiveis, n_clusters=3)
+        self.agrupador.nomes_clusters = self._nomear_clusters(clusters_info)
+        
+        # ETAPA 4: Calcula score final com pesos da regressão
         recursos_com_score = []
         
         for recurso in recursos_elegiveis:
-            # Calcula score base (média ponderada das características)
-            score_base = self._calcular_score_base(recurso)
-            
-            # ETAPA 3: Análise de Associação
-            score_associacao = self.associador.calcular_score_associacao(recurso)
-            
-            # ETAPA 4: Agrupamento por Similaridade
-            score_similaridade = self.agrupador.calcular_similaridade(recurso)
-            
-            # ETAPA 5: Score final ponderado
             score_final = (
-                score_base * Config.PESO_SCORE_BASE +
-                score_associacao * Config.PESO_ASSOCIACAO +
-                score_similaridade * Config.PESO_SIMILARIDADE
+                recurso.facilidadeUso * pesos['facilidadeUso'] +
+                recurso.engajamentoPotencial * pesos['engajamentoPotencial'] +
+                recurso.adaptabilidadePedagogica * pesos['adaptabilidadePedagogica'] +
+                recurso.requisitosInfraestrutura * pesos['requisitosInfraestrutura'] +
+                recurso.custoAcessibilidade * pesos['custoAcessibilidade']
             )
             
-            # Obtem regras ativadas para explicabilidade
-            regras_ativadas = self.associador.obter_regras_ativadas(recurso)
+            # Obter cluster do recurso
+            idx_recurso = recursos_elegiveis.index(recurso) if recurso in recursos_elegiveis else -1
+            cluster_id = self.agrupador.labels_recursos[idx_recurso] if idx_recurso >= 0 else 0
+            
             distancias = self.agrupador.obter_distancias_detalhadas(recurso)
             
             recursos_com_score.append({
                 'recurso': recurso,
-                'scoreBase': round(score_base, 4),
-                'scoreAssociacao': round(score_associacao, 4),
-                'scoreSimilaridade': round(score_similaridade, 4),
                 'scoreFinal': round(score_final, 4),
-                'regrasAtivadas': regras_ativadas,
+                'cluster_id': int(cluster_id),
                 'distancias': distancias
             })
         
-        # ETAPA 6: Ordena por score final
+        # ETAPA 5: Ordena por score final
         recursos_com_score.sort(key=lambda x: x['scoreFinal'], reverse=True)
         
-        # ETAPA 7: Retorna top N recomendações
-        ranking = recursos_com_score[:Config.NUM_RECOMENDACOES]
+        # ETAPA 6: Retorna top 10
+        ranking = recursos_com_score[:10]
         
-        # ETAPA 8: Análises estatísticas
-        analises = self._gerar_analises(recursos_com_score, len(self.recursos))
+        analises = self._gerar_analises(recursos_com_score, len(self.recursos), pesos)
         
         return {
             'ranking': [self._formatar_resultado(r) for r in ranking],
             'analises': analises
         }
     
-    def _calcular_score_base(self, recurso):
-        """
-        Calcula score base baseado nas características intrínsecas
+    def _nomear_clusters(self, clusters_info):
+        """Atribui nomes descritivos aos clusters"""
+        nomes = {}
         
-        Returns:
-            float: Score base [0-1]
-        """
-        pesos = Config.PESOS_CARACTERISTICAS
+        cluster_names = {
+            0: "Ferramentas Iniciante-Friendly",
+            1: "Ferramentas Avançadas",
+            2: "Ferramentas Colaborativas"
+        }
         
-        score = (
-            recurso.facilidadeUso * pesos['facilidadeUso'] +
-            recurso.engajamentoPotencial * pesos['engajamentoPotencial'] +
-            recurso.adaptabilidadePedagogica * pesos['adaptabilidadePedagogica'] +
-            recurso.requisitosInfraestrutura * pesos['requisitosInfraestrutura'] +
-            recurso.custoAcessibilidade * pesos['custoAcessibilidade']
-        )
+        for label in clusters_info['clusters'].keys():
+            nomes[label] = cluster_names.get(label, f"Cluster {label}")
         
-        return score
+        return nomes
     
-    def _gerar_analises(self, recursos_com_score, total_recursos):
-        """
-        Gera estatísticas sobre o processo de recomendação
-        
-        Returns:
-            dict: Análises estatísticas
-        """
+    def _gerar_analises(self, recursos_com_score, total_recursos, pesos):
+        """Gera estatísticas sobre o processo"""
         if not recursos_com_score:
             return {}
         
         scores_finais = [r['scoreFinal'] for r in recursos_com_score]
-        scores_associacao = [r['scoreAssociacao'] for r in recursos_com_score]
-        scores_similaridade = [r['scoreSimilaridade'] for r in recursos_com_score]
-        
-        # Determina qual critério foi mais importante
-        media_associacao = sum(scores_associacao) / len(scores_associacao)
-        media_similaridade = sum(scores_similaridade) / len(scores_similaridade)
-        
-        criterio_predominante = (
-            'Associação' if media_associacao > media_similaridade 
-            else 'Similaridade'
-        )
         
         return {
             'totalRecursos': total_recursos,
             'recursosElegiveis': len(recursos_com_score),
             'taxaFiltragem': round(
-                ((total_recursos - len(recursos_com_score)) / total_recursos) * 100, 
-                1
+                ((total_recursos - len(recursos_com_score)) / total_recursos) * 100, 1
             ),
             'mediaScoreFinal': round(sum(scores_finais) / len(scores_finais), 3),
-            'medianaScoreFinal': round(
-                sorted(scores_finais)[len(scores_finais) // 2], 
-                3
-            ),
-            'principalCriterio': criterio_predominante,
-            'mediaAssociacao': round(media_associacao, 3),
-            'mediaSimilaridade': round(media_similaridade, 3)
+            'medianaScoreFinal': round(sorted(scores_finais)[len(scores_finais) // 2], 3),
+            'pesos_regressao': pesos,
+            'metricas_regressao': self.regressor.obter_metricas()
         }
     
     def _formatar_resultado(self, resultado):
-        """
-        Formata resultado para envio ao frontend
-        
-        Returns:
-            dict: Resultado formatado
-        """
+        """Formata resultado para envio ao frontend"""
         recurso = resultado['recurso']
         
         return {
@@ -166,11 +123,8 @@ class SistemaRecomendacao:
             'area': recurso.area,
             'categoria': recurso.categoria,
             'descricao': recurso.descricao,
-            'scoreBase': resultado['scoreBase'],
-            'scoreAssociacao': resultado['scoreAssociacao'],
-            'scoreSimilaridade': resultado['scoreSimilaridade'],
             'scoreFinal': resultado['scoreFinal'],
-            'regrasAtivadas': resultado['regrasAtivadas'],
+            'cluster_id': resultado['cluster_id'],
             'distancias': resultado['distancias'],
             'caracteristicas': {
                 'facilidadeUso': recurso.facilidadeUso,

@@ -8,7 +8,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: 'https://helenapi.perronedev.com.br',
+        target: 'http://localhost:5000/api',
         changeOrigin: true
       }
     }
