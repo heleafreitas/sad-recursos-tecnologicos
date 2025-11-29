@@ -41,9 +41,9 @@ function App() {
       <div className="container mx-auto px-2">
         {/* Header */}
         <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 mb-6">
-          <h1 className="text-2xl md:text-3xl font-bold text-indigo-900 mb-2">
-            Sistema de Apoio à Decisão para Recursos Tecnológicos
-          </h1>
+          <h2 className="text-2xl md:text-3xl font-bold text-indigo-900 mb-2">
+            EdTech: Sistema de Apoio à Decisão para Recursos Tecnológicos
+          </h2>
           <p className="text-gray-600 text-sm md:text-base">
             Recomendação personalizada baseada em análise de dados com Python
           </p>

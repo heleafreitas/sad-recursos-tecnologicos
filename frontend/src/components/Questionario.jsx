@@ -1,9 +1,10 @@
-import { BookOpen, ChevronRight, Settings, Users } from 'lucide-react';
+import { BookOpen, Check, ChevronLeft, ChevronRight, Settings, Users } from 'lucide-react';
 import { useState } from 'react';
 
 const Questionario = ({ onSubmit }) => {
   const [respostas, setRespostas] = useState({});
   const [loading, setLoading] = useState(false);
+  const [etapaAtual, setEtapaAtual] = useState(0);
 
   const questionario = {
     perfilProfessor: [
@@ -148,6 +149,12 @@ const Questionario = ({ onSubmit }) => {
     ]
   };
 
+  const secoes = [
+    { titulo: 'Perfil do Professor', icon: Users, perguntas: questionario.perfilProfessor },
+    { titulo: 'Perfil da Turma', icon: BookOpen, perguntas: questionario.perfilTurma },
+    { titulo: 'Contexto Pedagógico', icon: Settings, perguntas: questionario.contextoPedagogico }
+  ];
+
   const handleResposta = (id, valor) => {
     setRespostas(prev => ({
       ...prev,
@@ -163,6 +170,20 @@ const Questionario = ({ onSubmit }) => {
       console.error('Erro ao submeter:', error);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const proximaEtapa = () => {
+    if (etapaAtual < secoes.length - 1) {
+      setEtapaAtual(etapaAtual + 1);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const etapaAnterior = () => {
+    if (etapaAtual > 0) {
+      setEtapaAtual(etapaAtual - 1);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
@@ -241,45 +262,99 @@ const Questionario = ({ onSubmit }) => {
     }
   };
 
-  const secoes = [
-    { titulo: 'Perfil do Professor', icon: Users, perguntas: questionario.perfilProfessor },
-    { titulo: 'Perfil da Turma', icon: BookOpen, perguntas: questionario.perfilTurma },
-    { titulo: 'Contexto Pedagógico', icon: Settings, perguntas: questionario.contextoPedagogico }
-  ];
+  // Verifica se todos os campos da etapa atual estão preenchidos
+  const etapaCompleta = () => {
+    const perguntasEtapa = secoes[etapaAtual].perguntas;
+    return perguntasEtapa.every(pergunta => {
+      const resposta = respostas[pergunta.id];
+      
+      // Para checkboxes, verifica se pelo menos um foi selecionado
+      if (pergunta.tipo === 'checkbox') {
+        return resposta && resposta.length > 0;
+      }
+      
+      // Para outros tipos, verifica se não está vazio/undefined/null
+      return resposta !== undefined && resposta !== null && resposta !== '';
+    });
+  };
+
+  // Verifica se todas as etapas estão completas
+  const todasEtapasCompletas = () => {
+    return secoes.every((secao) => {
+      return secao.perguntas.every(pergunta => {
+        const resposta = respostas[pergunta.id];
+        if (pergunta.tipo === 'checkbox') {
+          return resposta && resposta.length > 0;
+        }
+        return resposta !== undefined && resposta !== null && resposta !== '';
+      });
+    });
+  };
+
+  const secaoAtual = secoes[etapaAtual];
+  const Icon = secaoAtual.icon;
+  const ehUltimaEtapa = etapaAtual === secoes.length - 1;
+  const podeAvancar = etapaCompleta();
 
   return (
     <div className="space-y-8">
-      {secoes.map((secao, idx) => {
-        const Icon = secao.icon;
-        return (
-          <div key={idx} className="bg-white rounded-lg shadow-lg p-6">
-            <h2 className="text-2xl font-bold text-indigo-900 mb-6 flex items-center gap-2">
-              <Icon size={24} />
-              {secao.titulo}
-            </h2>
-            
-            <div className="space-y-6">
-              {secao.perguntas.map((pergunta) => (
-                <div key={pergunta.id} className="border-b border-gray-200 pb-4 last:border-b-0">
-                  <label className="block text-gray-800 font-medium mb-3">
-                    {pergunta.pergunta}
-                  </label>
-                  {renderCampo(pergunta)}
-                </div>
-              ))}
+      {/* Conteúdo da Etapa Atual */}
+      <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+        <div className="w-full bg-gray-200 rounded-full h-2.5">
+          <div
+            className="bg-indigo-600 h-2.5 rounded-full transition-all duration-300"
+            style={{ width: `${((etapaAtual + 1) / secoes.length) * 100}%` }}
+          ></div>
+        </div>
+        <h2 className="text-2xl font-bold text-indigo-900 mb-6 flex items-center gap-2 mt-4">
+          <Icon size={24} />
+          {secaoAtual.titulo}
+        </h2>
+        
+        <div className="h-115 overflow-y-auto space-y-6">
+          {secaoAtual.perguntas.map((pergunta) => (
+            <div key={pergunta.id} className="border-b border-gray-200 pb-4 last:border-b-0">
+              <label className="block text-gray-800 font-medium mb-3">
+                {pergunta.pergunta}
+                <span className="text-red-500 ml-1">*</span>
+              </label>
+              {renderCampo(pergunta)}
             </div>
-          </div>
-        );
-      })}
+          ))}
+        </div>
+      </div>
 
-      <button
-        onClick={handleSubmit}
-        disabled={loading}
-        className="w-full py-4 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 disabled:bg-gray-400 flex items-center justify-center gap-2 text-lg transition"
-      >
-        {loading ? 'Processando...' : 'Gerar Recomendações'}
-        {!loading && <ChevronRight size={24} />}
-      </button>
+      {/* Botões de Navegação */}
+      <div className="flex gap-4">
+        <button
+          onClick={etapaAnterior}
+          disabled={etapaAtual === 0}
+          className="flex-1 py-4 bg-gray-200 text-gray-700 font-bold rounded-lg hover:bg-gray-300 disabled:bg-gray-100 disabled:text-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-2 text-lg transition"
+        >
+          <ChevronLeft size={24} />
+          Anterior
+        </button>
+
+        {ehUltimaEtapa ? (
+          <button
+            onClick={handleSubmit}
+            disabled={loading || !todasEtapasCompletas()}
+            className="flex-1 py-4 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-2 text-lg transition"
+          >
+            {loading ? 'Processando...' : 'Gerar Recomendações'}
+            {!loading && <Check size={24} />}
+          </button>
+        ) : (
+          <button
+            onClick={proximaEtapa}
+            disabled={!podeAvancar}
+            className="flex-1 py-4 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-2 text-lg transition"
+          >
+            Próxima
+            <ChevronRight size={24} />
+          </button>
+        )}
+      </div>
     </div>
   );
 };
