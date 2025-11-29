@@ -65,17 +65,6 @@ const AnaliseMetodologia = () => {
             {metodologia.formula_score_final}
           </code>
         </div>
-
-        <div className="mt-4">
-          <h3 className="font-bold text-gray-900 mb-2">Referências Acadêmicas</h3>
-          <ul className="space-y-1">
-            {metodologia.referencias.map((ref, idx) => (
-              <li key={idx} className="text-xs text-gray-600 pl-4 border-l-2 border-gray-300">
-                {ref}
-              </li>
-            ))}
-          </ul>
-        </div>
       </div>
     </div>
   );

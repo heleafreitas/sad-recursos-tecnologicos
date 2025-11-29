@@ -1,5 +1,10 @@
 import { Award, BarChart3, CheckCircle, TrendingUp } from 'lucide-react';
 
+function formatKey(key) {
+    let separated = key.replace(/([A-Z])/g, ' $1').trim();
+    return separated.charAt(0).toUpperCase() + separated.slice(1);
+}
+
 const Resultado = ({ ranking, analises, onNovaConsulta }) => {
   const getCorMedalha = (idx) => {
     if (idx === 0) return 'bg-yellow-500';
@@ -16,7 +21,7 @@ const Resultado = ({ ranking, analises, onNovaConsulta }) => {
           <BarChart3 size={28} />
           Análise do Sistema
         </h2>
-        <div className="grid md:grid-cols-4 gap-4">
+        <div className="grid md:grid-cols-3 gap-3">
           <div className="bg-white/10 rounded-lg p-4">
             <p className="text-sm opacity-90">Recursos Analisados</p>
             <p className="text-3xl font-bold">{analises.totalRecursos}</p>
@@ -28,10 +33,6 @@ const Resultado = ({ ranking, analises, onNovaConsulta }) => {
           <div className="bg-white/10 rounded-lg p-4">
             <p className="text-sm opacity-90">Taxa de Filtragem</p>
             <p className="text-3xl font-bold">{analises.taxaFiltragem}%</p>
-          </div>
-          <div className="bg-white/10 rounded-lg p-4">
-            <p className="text-sm opacity-90">Critério Predominante</p>
-            <p className="text-2xl font-bold">{analises.principalCriterio}</p>
           </div>
         </div>
       </div>
@@ -66,40 +67,13 @@ const Resultado = ({ ranking, analises, onNovaConsulta }) => {
               </div>
 
               <p className="text-gray-700 mb-4">{recurso.descricao}</p>
-
-              {/* Scores Detalhados */}
-              <div className="grid md:grid-cols-3 gap-3 mb-4">
-                <div className="bg-blue-50 p-3 rounded-lg">
-                  <p className="text-xs text-blue-800 font-medium">Score Base</p>
-                  <p className="text-lg font-bold text-blue-900">{(recurso.scoreBase * 100).toFixed(1)}%</p>
-                  <p className="text-xs text-blue-600">Características intrínsecas</p>
-                </div>
-                <div className="bg-green-50 p-3 rounded-lg">
-                  <p className="text-xs text-green-800 font-medium">Associação</p>
-                  <p className="text-lg font-bold text-green-900">{(recurso.scoreAssociacao * 100).toFixed(1)}%</p>
-                  <p className="text-xs text-green-600">Compatibilidade contextual</p>
-                </div>
-                <div className="bg-purple-50 p-3 rounded-lg">
-                  <p className="text-xs text-purple-800 font-medium">Similaridade</p>
-                  <p className="text-lg font-bold text-purple-900">{(recurso.scoreSimilaridade * 100).toFixed(1)}%</p>
-                  <p className="text-xs text-purple-600">Alinhamento com perfil</p>
-                </div>
-              </div>
-
               {/* Características do Recurso */}
               <div className="grid grid-cols-5 gap-2 mb-4">
                 {Object.entries(recurso.caracteristicas).map(([key, value]) => (
-                  <div key={key} className="text-center">
-                    <div className="w-full bg-gray-200 rounded-full h-2 mb-1">
-                      <div 
-                        className={`h-2 rounded-full ${value >= 0.8 ? 'bg-green-500' : value >= 0.6 ? 'bg-yellow-500' : 'bg-orange-500'}`}
-                        style={{ width: `${value * 100}%` }}
-                      ></div>
-                    </div>
-                    <p className="text-xs text-gray-600 truncate" title={key}>
-                      {key.replace(/([A-Z])/g, ' $1').trim()}
-                    </p>
-                  </div>
+                  <div  key={key} className="flex flex-col justify-between bg-purple-50 p-3 rounded-lg">
+                  <p className="text-xs text-purple-800 font-medium">{formatKey(key)}</p>
+                  <p className="text-lg font-bold text-purple-900">{(value * 100).toFixed(1)}%</p>
+                </div>
                 ))}
               </div>
 
@@ -122,22 +96,6 @@ const Resultado = ({ ranking, analises, onNovaConsulta }) => {
                   <p className="text-sm text-gray-600">Recurso bem equilibrado para seu contexto</p>
                 )}
               </div>
-
-              {/* Referências */}
-              {recurso.referencias && recurso.referencias.length > 0 && (
-                <details className="mt-4">
-                  <summary className="text-sm font-semibold text-indigo-700 cursor-pointer hover:text-indigo-900">
-                    Ver referências bibliográficas ({recurso.referencias.length})
-                  </summary>
-                  <ul className="mt-2 space-y-1 pl-4">
-                    {recurso.referencias.map((ref, i) => (
-                      <li key={i} className="text-xs text-gray-600 border-l-2 border-gray-300 pl-2">
-                        {ref}
-                      </li>
-                    ))}
-                  </ul>
-                </details>
-              )}
             </div>
           ))}
         </div>

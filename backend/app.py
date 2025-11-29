@@ -48,51 +48,7 @@ def listar_recursos():
 def gerar_recomendacoes():
     """
     POST /api/recomendacoes
-    Recebe respostas do questionário e retorna ranking de recomendações
-    
-    Utiliza as 3 funções de ML:
-    1. Classificação (Decision Tree) - Filtra recursos elegíveis
-    2. Agrupamento (K-Means) - Agrupa recursos em clusters
-    3. Regressão Linear - Calcula pesos para o score final
-    
-    Body:
-        {
-            "disciplina": "Matemática",
-            "familiaridadeTech": 0.6,
-            "estiloEnsino": "investigativo",
-            ...
-        }
-    
-    Response:
-        {
-            "success": true,
-            "data": {
-                "ranking": [
-                    {
-                        "id": 1,
-                        "nome": "GeoGebra",
-                        "scoreFinal": 0.7845,
-                        "cluster_id": 0,
-                        ...
-                    }
-                ],
-                "analises": {
-                    "totalRecursos": 10,
-                    "recursosElegiveis": 8,
-                    "taxaFiltragem": 20.0,
-                    "pesos_regressao": {
-                        "facilidadeUso": 0.22,
-                        "engajamentoPotencial": 0.18,
-                        ...
-                    },
-                    "metricas_regressao": {
-                        "r2_score": 0.85,
-                        "rmse": 0.12,
-                        ...
-                    }
-                }
-            }
-        }
+    Gera recomendações baseado nas respostas do questionário
     """
     try:
         # Valida request
@@ -115,7 +71,7 @@ def gerar_recomendacoes():
         # Gera recomendações usando o novo sistema integrado
         sistema = SistemaRecomendacao(respostas, recursos)
         resultado = sistema.gerar_recomendacoes()
-        
+
         logger.info(f"Recomendações geradas com sucesso. Total: {len(resultado['ranking'])}")
         
         return jsonify({
