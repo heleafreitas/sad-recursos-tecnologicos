@@ -17,7 +17,8 @@
     "offline": true,
     "referencias": [
       "Hohenwarter, M., & Jones, K. (2007). Ways of linking geometry and algebra",
-      "Zengin, Y., & Tatar, E. (2017). Integrating dynamic mathematics software"
+      "Zengin, Y., & Tatar, E. (2017). Integrating dynamic mathematics software",
+      "Shadaan, P., & Leong, K. E. (2013). Effectiveness of using GeoGebra"
     ]
   },
   {
@@ -38,7 +39,8 @@
     "offline": false,
     "referencias": [
       "Nwosisi, C., et al. (2016). Study of the effectiveness of Khan Academy use",
-      "Murphy, R., et al. (2014). Investigating the efficacy of Khan Academy"
+      "Murphy, R., et al. (2014). Investigating the efficacy of Khan Academy",
+      "Thompson, P. (2011). The digital natives as learners"
     ]
   },
   {
@@ -59,35 +61,81 @@
     "offline": false,
     "referencias": [
       "Crompton, H., et al. (2017). Mobile learning and student cognition",
-      "Rakes, C. R., et al. (2010). Methods of instructional improvement"
+      "Rakes, C. R., et al. (2010). Methods of instructional improvement",
+      "National Council of Teachers of Mathematics (2020)"
     ]
   },
   {
     "id": 4,
-    "nome": "Kahoot!",
-    "area": "Multidisciplinar",
-    "categoria": "Gamificação e Quiz",
-    "descricao": "Quizzes competitivos em tempo real com ranking e pontuação",
+    "nome": "Photomath",
+    "area": "Matemática",
+    "categoria": "Aplicativo de Resolução de Problemas",
+    "descricao": "Resolução passo a passo de problemas matemáticos usando câmera do celular",
     "facilidadeUso": 0.95,
-    "engajamentoPotencial": 0.95,
-    "adaptabilidadePedagogica": 0.75,
-    "requisitosInfraestrutura": 0.70,
-    "custoAcessibilidade": 0.85,
-    "tags": ["revisao", "expositivo", "hibrido"],
+    "engajamentoPotencial": 0.80,
+    "adaptabilidadePedagogica": 0.60,
+    "requisitosInfraestrutura": 0.85,
+    "custoAcessibilidade": 0.90,
+    "tags": ["autonomia", "pratica", "revisao"],
     "modalidades": ["presencial", "hibrida", "remota"],
-    "dispositivos": ["celular", "computador"],
-    "avaliacao": true,
-    "offline": false,
+    "dispositivos": ["celular"],
+    "avaliacao": false,
+    "offline": true,
     "referencias": [
-      "Wang, A. I., & Tahir, R. (2020). The effect of using Kahoot! for learning",
-      "Licorish, S. A., et al. (2018). Students' perception of Kahoot!"
+      "Doz, D., et al. (2018). Use of calculators in students' problem-solving",
+      "Juarez, J. A. (2019). Impact of mobile apps on mathematics learning",
+      "Roschelle, J., et al. (2010). Integration of technology and curriculum"
     ]
   },
   {
     "id": 5,
+    "nome": "Wolfram Alpha",
+    "area": "Matemática",
+    "categoria": "Motor de Conhecimento Computacional",
+    "descricao": "Resolução simbólica de equações, gráficos avançados e análise matemática",
+    "facilidadeUso": 0.65,
+    "engajamentoPotencial": 0.70,
+    "adaptabilidadePedagogica": 0.75,
+    "requisitosInfraestrutura": 0.70,
+    "custoAcessibilidade": 0.85,
+    "tags": ["investigativo", "pratica", "autonomia"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador", "celular"],
+    "avaliacao": false,
+    "offline": false,
+    "referencias": [
+      "Wolfram, S. (2009). Wolfram|Alpha as the way to apply knowledge",
+      "Ball, L., & Stacey, K. (2005). Teaching strategies for developing judicious technology use",
+      "Pierce, R., & Stacey, K. (2010). Mapping pedagogical opportunities"
+    ]
+  },
+  {
+    "id": 6,
+    "nome": "Symbolab",
+    "area": "Matemática",
+    "categoria": "Solucionador de Problemas Matemáticos",
+    "descricao": "Calculadora passo a passo para álgebra, cálculo e trigonometria",
+    "facilidadeUso": 0.80,
+    "engajamentoPotencial": 0.75,
+    "adaptabilidadePedagogica": 0.70,
+    "requisitosInfraestrutura": 0.75,
+    "custoAcessibilidade": 0.80,
+    "tags": ["pratica", "revisao", "autonomia"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador", "celular"],
+    "avaliacao": false,
+    "offline": false,
+    "referencias": [
+      "Kilpatrick, J., et al. (2001). Adding it up: Helping children learn mathematics",
+      "Niss, M. (2003). Mathematical competencies and the learning of mathematics",
+      "Schoenfeld, A. H. (1992). Learning to think mathematically"
+    ]
+  },
+  {
+    "id": 7,
     "nome": "Google Docs",
     "area": "Redação",
-    "categoria": "Editor Colaborativo",
+    "categoria": "Editor Colaborativo de Texto",
     "descricao": "Escrita colaborativa em tempo real com comentários e sugestões",
     "facilidadeUso": 0.90,
     "engajamentoPotencial": 0.75,
@@ -101,14 +149,631 @@
     "offline": true,
     "referencias": [
       "Zhou, W., et al. (2012). Using Google Docs to facilitate collaborative writing",
-      "Brodahl, C., et al. (2011). Collaboration using Google Docs"
+      "Brodahl, C., et al. (2011). Collaboration using Google Docs",
+      "Yim, S., et al. (2017). The affordances of Google Docs"
     ]
   },
   {
-    "id": 6,
+    "id": 8,
+    "nome": "Canva",
+    "area": "Redação",
+    "categoria": "Design Gráfico e Apresentações",
+    "descricao": "Criação de infográficos, apresentações e materiais visuais com templates",
+    "facilidadeUso": 0.90,
+    "engajamentoPotencial": 0.90,
+    "adaptabilidadePedagogica": 0.85,
+    "requisitosInfraestrutura": 0.70,
+    "custoAcessibilidade": 0.85,
+    "tags": ["projetos", "pratica", "introducao", "hibrido"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador", "celular"],
+    "avaliacao": false,
+    "offline": false,
+    "referencias": [
+      "Mango, O. (2019). iPad use and student engagement in the classroom",
+      "Bower, M. (2017). Design of technology-enhanced learning",
+      "Puentedura, R. R. (2006). Transformation, technology, and education"
+    ]
+  },
+  {
+    "id": 9,
+    "nome": "Grammarly",
+    "area": "Redação",
+    "categoria": "Assistente de Escrita com IA",
+    "descricao": "Correção gramatical, ortográfica e sugestões de estilo para textos",
+    "facilidadeUso": 0.85,
+    "engajamentoPotencial": 0.70,
+    "adaptabilidadePedagogica": 0.65,
+    "requisitosInfraestrutura": 0.75,
+    "custoAcessibilidade": 0.75,
+    "tags": ["autonomia", "pratica", "revisao"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador"],
+    "avaliacao": true,
+    "offline": false,
+    "referencias": [
+      "O'Neill, R., & Russell, A. (2019). Stop! Grammar time: University students' perceptions",
+      "Cavaleri, M. R., & Dianati, S. (2016). You want me to check your grammar again?",
+      "Grimes, D., & Warschauer, M. (2010). Utility in a fallible tool"
+    ]
+  },
+  {
+    "id": 10,
+    "nome": "Storyboard That",
+    "area": "Redação",
+    "categoria": "Criador de Histórias em Quadrinhos",
+    "descricao": "Criação de storyboards, histórias em quadrinhos e narrativas visuais",
+    "facilidadeUso": 0.85,
+    "engajamentoPotencial": 0.85,
+    "adaptabilidadePedagogica": 0.80,
+    "requisitosInfraestrutura": 0.70,
+    "custoAcessibilidade": 0.70,
+    "tags": ["projetos", "pratica", "introducao"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador", "celular"],
+    "avaliacao": false,
+    "offline": false,
+    "referencias": [
+      "Hutchison, A., & Reinking, D. (2011). Teachers' perceptions of integrating ICT",
+      "Paivio, A. (1990). Mental representations: A dual coding approach",
+      "McCloud, S. (1993). Understanding Comics"
+    ]
+  },
+  {
+    "id": 11,
+    "nome": "Hemingway Editor",
+    "area": "Redação",
+    "categoria": "Editor de Clareza e Legibilidade",
+    "descricao": "Análise de legibilidade e simplificação de textos complexos",
+    "facilidadeUso": 0.90,
+    "engajamentoPotencial": 0.70,
+    "adaptabilidadePedagogica": 0.75,
+    "requisitosInfraestrutura": 0.80,
+    "custoAcessibilidade": 0.90,
+    "tags": ["pratica", "revisao", "autonomia"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador"],
+    "avaliacao": true,
+    "offline": true,
+    "referencias": [
+      "DuBay, W. H. (2004). The Principles of Readability",
+      "Graesser, A. C., et al. (2004). Coh-Metrix: Analysis of text on cohesion",
+      "Crossley, S. A., et al. (2011). Text readability and intuitive simplification"
+    ]
+  },
+  {
+    "id": 12,
+    "nome": "Escribo Play",
+    "area": "Redação",
+    "categoria": "Jogos de Alfabetização",
+    "descricao": "Jogos educativos para desenvolvimento de habilidades de escrita e leitura",
+    "facilidadeUso": 0.95,
+    "engajamentoPotencial": 0.85,
+    "adaptabilidadePedagogica": 0.70,
+    "requisitosInfraestrutura": 0.75,
+    "custoAcessibilidade": 0.70,
+    "tags": ["pratica", "autonomia", "introducao"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["celular", "computador"],
+    "avaliacao": true,
+    "offline": true,
+    "referencias": [
+      "Moita Lopes, L. P. (1996). Oficina de Linguística Aplicada",
+      "Soares, M. (2003). Letramento: um tema em três gêneros",
+      "Rojo, R. (2009). Letramentos múltiplos, escola e inclusão social"
+    ]
+  },
+  {
+    "id": 13,
+    "nome": "PhET Simulations",
+    "area": "Física",
+    "categoria": "Simulações Científicas Interativas",
+    "descricao": "Laboratórios virtuais para experimentação em física",
+    "facilidadeUso": 0.80,
+    "engajamentoPotencial": 0.90,
+    "adaptabilidadePedagogica": 0.85,
+    "requisitosInfraestrutura": 0.75,
+    "custoAcessibilidade": 1.0,
+    "tags": ["investigativo", "introducao", "pratica", "projetos"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador"],
+    "avaliacao": false,
+    "offline": true,
+    "referencias": [
+      "Wieman, C. E., et al. (2008). PhET: Simulations that enhance learning",
+      "Perkins, K., et al. (2006). PhET interactive simulations",
+      "Moore, E. B., et al. (2014). Simulations as tools in science education"
+    ]
+  },
+  {
+    "id": 14,
+    "nome": "Algodoo",
+    "area": "Física",
+    "categoria": "Simulador de Física 2D",
+    "descricao": "Criação e simulação de experimentos de física com interface intuitiva",
+    "facilidadeUso": 0.75,
+    "engajamentoPotencial": 0.90,
+    "adaptabilidadePedagogica": 0.85,
+    "requisitosInfraestrutura": 0.70,
+    "custoAcessibilidade": 1.0,
+    "tags": ["investigativo", "projetos", "pratica"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador", "celular"],
+    "avaliacao": false,
+    "offline": true,
+    "referencias": [
+      "Olympiou, G., & Zacharia, Z. C. (2012). Blending physical and virtual manipulatives",
+      "de Jong, T., et al. (2013). Physical and virtual laboratories",
+      "Clark, D., et al. (2016). Digital games, design, and learning"
+    ]
+  },
+  {
+    "id": 15,
+    "nome": "Tracker Video Analysis",
+    "area": "Física",
+    "categoria": "Análise de Movimento em Vídeo",
+    "descricao": "Análise de vídeos para estudo de cinemática e dinâmica",
+    "facilidadeUso": 0.60,
+    "engajamentoPotencial": 0.75,
+    "adaptabilidadePedagogica": 0.80,
+    "requisitosInfraestrutura": 0.65,
+    "custoAcessibilidade": 1.0,
+    "tags": ["investigativo", "projetos", "pratica"],
+    "modalidades": ["presencial", "hibrida"],
+    "dispositivos": ["computador"],
+    "avaliacao": false,
+    "offline": true,
+    "referencias": [
+      "Brown, D. (2009). Video Modeling with Tracker",
+      "Wee, L. K., et al. (2012). Using Tracker as a pedagogical tool",
+      "Bryan, J. A. (2006). Technology for physics instruction"
+    ]
+  },
+  {
+    "id": 16,
+    "nome": "Crocodile Physics",
+    "area": "Física",
+    "categoria": "Simulador de Circuitos e Experimentos",
+    "descricao": "Simulação de circuitos elétricos e experimentos de física",
+    "facilidadeUso": 0.70,
+    "engajamentoPotencial": 0.80,
+    "adaptabilidadePedagogica": 0.75,
+    "requisitosInfraestrutura": 0.75,
+    "custoAcessibilidade": 0.60,
+    "tags": ["investigativo", "pratica", "introducao"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador"],
+    "avaliacao": false,
+    "offline": true,
+    "referencias": [
+      "Finkelstein, N. D., et al. (2005). When learning about the real world is better done virtually",
+      "Zacharia, Z. C. (2007). Comparing and combining real and virtual experimentation",
+      "Chini, J. J., et al. (2012). Improving student understanding of electrostatics"
+    ]
+  },
+  {
+    "id": 17,
+    "nome": "Socrative",
+    "area": "Física",
+    "categoria": "Quizzes e Avaliação Formativa",
+    "descricao": "Avaliações instantâneas e quizzes em tempo real para física",
+    "facilidadeUso": 0.90,
+    "engajamentoPotencial": 0.80,
+    "adaptabilidadePedagogica": 0.80,
+    "requisitosInfraestrutura": 0.70,
+    "custoAcessibilidade": 0.90,
+    "tags": ["revisao", "pratica", "expositivo"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["celular", "computador"],
+    "avaliacao": true,
+    "offline": false,
+    "referencias": [
+      "Wash, P. D. (2014). Taking advantage of mobile devices",
+      "Dervan, P. (2014). Enhancing in-class student engagement using Socrative",
+      "Awedh, M., et al. (2014). Using Socrative and smartphones for formative assessment"
+    ]
+  },
+  {
+    "id": 18,
+    "nome": "ChemCollective",
+    "area": "Química",
+    "categoria": "Laboratório Virtual de Química",
+    "descricao": "Experimentos virtuais de química com simulação realista",
+    "facilidadeUso": 0.70,
+    "engajamentoPotencial": 0.85,
+    "adaptabilidadePedagogica": 0.80,
+    "requisitosInfraestrutura": 0.70,
+    "custoAcessibilidade": 1.0,
+    "tags": ["investigativo", "pratica", "projetos"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador"],
+    "avaliacao": false,
+    "offline": false,
+    "referencias": [
+      "Yaron, D., et al. (2010). The ChemCollective—Virtual labs",
+      "Tatli, Z., & Ayas, A. (2013). Effect of a virtual chemistry laboratory",
+      "Dalgarno, B., et al. (2009). Effectiveness of a virtual laboratory"
+    ]
+  },
+  {
+    "id": 19,
+    "nome": "Ptable",
+    "area": "Química",
+    "categoria": "Tabela Periódica Interativa",
+    "descricao": "Exploração interativa de elementos químicos e propriedades",
+    "facilidadeUso": 0.90,
+    "engajamentoPotencial": 0.75,
+    "adaptabilidadePedagogica": 0.70,
+    "requisitosInfraestrutura": 0.80,
+    "custoAcessibilidade": 1.0,
+    "tags": ["introducao", "revisao", "autonomia"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador", "celular"],
+    "avaliacao": false,
+    "offline": false,
+    "referencias": [
+      "Battino, R. (2001). The Periodic Table: An eight period table",
+      "Scerri, E. R. (2007). The Periodic Table: Its Story and Its Significance",
+      "Taber, K. S. (2003). Mediating mental models of metals"
+    ]
+  },
+  {
+    "id": 20,
+    "nome": "Mol View",
+    "area": "Química",
+    "categoria": "Visualização de Moléculas 3D",
+    "descricao": "Visualização tridimensional de estruturas moleculares",
+    "facilidadeUso": 0.80,
+    "engajamentoPotencial": 0.85,
+    "adaptabilidadePedagogica": 0.75,
+    "requisitosInfraestrutura": 0.75,
+    "custoAcessibilidade": 1.0,
+    "tags": ["introducao", "investigativo", "pratica"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador"],
+    "avaliacao": false,
+    "offline": false,
+    "referencias": [
+      "Wu, H. K., & Shah, P. (2004). Exploring visuospatial thinking in chemistry learning",
+      "Barnea, N., & Dori, Y. J. (1999). High-school chemistry students' performance",
+      "Williamson, V. M., & Abraham, M. R. (1995). The effects of computer animation"
+    ]
+  },
+  {
+    "id": 21,
+    "nome": "ChemDoodle",
+    "area": "Química",
+    "categoria": "Editor de Estruturas Químicas",
+    "descricao": "Criação e edição de fórmulas e estruturas químicas",
+    "facilidadeUso": 0.75,
+    "engajamentoPotencial": 0.75,
+    "adaptabilidadePedagogica": 0.80,
+    "requisitosInfraestrutura": 0.70,
+    "custoAcessibilidade": 0.75,
+    "tags": ["pratica", "projetos", "introducao"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador"],
+    "avaliacao": false,
+    "offline": true,
+    "referencias": [
+      "Kozma, R., & Russell, J. (2005). Students becoming chemists",
+      "Tasker, R., & Dalton, R. (2006). Research into practice: Visualisation",
+      "Gilbert, J. K. (2005). Visualization: A metacognitive skill in science"
+    ]
+  },
+  {
+    "id": 22,
+    "nome": "BioDigital Human",
+    "area": "Biologia",
+    "categoria": "Anatomia 3D Interativa",
+    "descricao": "Exploração do corpo humano em 3D com detalhes anatômicos",
+    "facilidadeUso": 0.75,
+    "engajamentoPotencial": 0.95,
+    "adaptabilidadePedagogica": 0.80,
+    "requisitosInfraestrutura": 0.65,
+    "custoAcessibilidade": 0.70,
+    "tags": ["introducao", "pratica", "investigativo"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador"],
+    "avaliacao": false,
+    "offline": false,
+    "referencias": [
+      "Moro, C., et al. (2017). The effectiveness of virtual and augmented reality",
+      "Khot, Z., et al. (2013). The relative effectiveness of computer-based learning",
+      "Petersson, H., et al. (2009). Web-based interactive 3D visualization"
+    ]
+  },
+  {
+    "id": 23,
+    "nome": "Labster",
+    "area": "Biologia",
+    "categoria": "Laboratório Virtual Imersivo",
+    "descricao": "Simulações de laboratório de biologia em ambiente virtual realista",
+    "facilidadeUso": 0.75,
+    "engajamentoPotencial": 0.90,
+    "adaptabilidadePedagogica": 0.85,
+    "requisitosInfraestrutura": 0.60,
+    "custoAcessibilidade": 0.60,
+    "tags": ["investigativo", "projetos", "pratica"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador"],
+    "avaliacao": true,
+    "offline": false,
+    "referencias": [
+      "Bonde, M. T., et al. (2014). Improving biotech education through gamified laboratory simulations",
+      "Makransky, G., et al. (2016). Developing and validating the Multimodal Presence Scale",
+      "Potkonjak, V., et al. (2016). Virtual laboratories for education in science"
+    ]
+  },
+  {
+    "id": 24,
+    "nome": "iNaturalist",
+    "area": "Biologia",
+    "categoria": "Identificação de Espécies",
+    "descricao": "App para identificação de plantas e animais com inteligência artificial",
+    "facilidadeUso": 0.90,
+    "engajamentoPotencial": 0.85,
+    "adaptabilidadePedagogica": 0.80,
+    "requisitosInfraestrutura": 0.75,
+    "custoAcessibilidade": 1.0,
+    "tags": ["investigativo", "projetos", "pratica"],
+    "modalidades": ["presencial", "hibrida"],
+    "dispositivos": ["celular"],
+    "avaliacao": false,
+    "offline": false,
+    "referencias": [
+      "Nugent, G., et al. (2010). The use of digital manipulatives in K-12",
+      "Aristeidou, M., & Herodotou, C. (2020). Online citizen science",
+      "Bonney, R., et al. (2014). Next steps for citizen science"
+    ]
+  },
+  {
+    "id": 25,
+    "nome": "Visible Body",
+    "area": "Biologia",
+    "categoria": "Atlas Anatômico 3D",
+    "descricao": "Atlas detalhado de anatomia humana com modelos 3D interativos",
+    "facilidadeUso": 0.70,
+    "engajamentoPotencial": 0.90,
+    "adaptabilidadePedagogica": 0.75,
+    "requisitosInfraestrutura": 0.60,
+    "custoAcessibilidade": 0.60,
+    "tags": ["introducao", "pratica", "investigativo"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador", "celular"],
+    "avaliacao": false,
+    "offline": true,
+    "referencias": [
+      "Codd, A. M., & Choudhury, B. (2011). Virtual reality anatomy",
+      "Tam, M. D., et al. (2009). A web-based imaging module",
+      "Lewis, T. L., et al. (2014). Effectiveness of student-generated content"
+    ]
+  },
+  {
+    "id": 26,
+    "nome": "Google Earth",
+    "area": "Geografia",
+    "categoria": "Exploração Geográfica Virtual",
+    "descricao": "Visualização de mapas, terrenos e localizações geográficas em 3D",
+    "facilidadeUso": 0.85,
+    "engajamentoPotencial": 0.85,
+    "adaptabilidadePedagogica": 0.80,
+    "requisitosInfraestrutura": 0.65,
+    "custoAcessibilidade": 1.0,
+    "tags": ["investigativo", "introducao", "projetos"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador", "celular"],
+    "avaliacao": false,
+    "offline": true,
+    "referencias": [
+      "Patterson, T. C. (2007). Google Earth as a (not just) geography education tool",
+      "Lund, E., et al. (2014). Virtual globes in science education",
+      "Doering, A., & Veletsianos, G. (2008). Hybrid online education"
+    ]
+  },
+  {
+    "id": 27,
+    "nome": "ArcGIS Online",
+    "area": "Geografia",
+    "categoria": "Sistema de Informação Geográfica",
+    "descricao": "Criação e análise de mapas interativos com dados geoespaciais",
+    "facilidadeUso": 0.65,
+    "engajamentoPotencial": 0.80,
+    "adaptabilidadePedagogica": 0.75,
+    "requisitosInfraestrutura": 0.60,
+    "custoAcessibilidade": 0.80,
+    "tags": ["investigativo", "projetos", "pratica"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador"],
+    "avaliacao": false,
+    "offline": false,
+    "referencias": [
+      "Kerski, J. J., et al. (2012). The implementation and effectiveness of geographic information systems",
+      "Baker, T. R., et al. (2015). A research agenda for geospatial technologies",
+      "Demirci, A. (2009). How do teachers approach new technologies"
+    ]
+  },
+  {
+    "id": 28,
+    "nome": "Seterra",
+    "area": "Geografia",
+    "categoria": "Jogos de Geografia",
+    "descricao": "Quiz interativo sobre mapas, países, capitais e geografia física",
+    "facilidadeUso": 0.95,
+    "engajamentoPotencial": 0.85,
+    "adaptabilidadePedagogica": 0.70,
+    "requisitosInfraestrutura": 0.75,
+    "custoAcessibilidade": 1.0,
+    "tags": ["revisao", "pratica", "autonomia"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador", "celular"],
+    "avaliacao": true,
+    "offline": true,
+    "referencias": [
+      "Muñoz-Cristóbal, J. A., et al. (2018). Toward supporting learning activities",
+      "Ihamäki, P., & Heljakka, K. (2018). Gamified learning experiences",
+      "Whitton, N. (2014). Digital games and learning"
+    ]
+  },
+  {
+    "id": 29,
+    "nome": "OpenStreetMap",
+    "area": "Geografia",
+    "categoria": "Mapeamento Colaborativo",
+    "descricao": "Criação e edição colaborativa de mapas mundiais",
+    "facilidadeUso": 0.70,
+    "engajamentoPotencial": 0.80,
+    "adaptabilidadePedagogica": 0.85,
+    "requisitosInfraestrutura": 0.70,
+    "custoAcessibilidade": 1.0,
+    "tags": ["projetos", "pratica", "investigativo"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador"],
+    "avaliacao": false,
+    "offline": false,
+    "referencias": [
+      "Haklay, M., & Weber, P. (2008). OpenStreetMap: User-generated street maps",
+      "Goodchild, M. F. (2007). Citizens as sensors: The world of volunteered geography",
+      "Coleman, D. J., et al. (2009). Volunteered geographic information"
+    ]
+  },
+  {
+    "id": 30,
+    "nome": "Timeline JS",
+    "area": "História",
+    "categoria": "Criador de Linhas do Tempo",
+    "descricao": "Linhas do tempo interativas com multimídia integrada",
+    "facilidadeUso": 0.75,
+    "engajamentoPotencial": 0.80,
+    "adaptabilidadePedagogica": 0.85,
+    "requisitosInfraestrutura": 0.70,
+    "custoAcessibilidade": 1.0,
+    "tags": ["projetos", "introducao", "pratica"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador"],
+    "avaliacao": false,
+    "offline": false,
+    "referencias": [
+      "Waring, S. M., & Robinson, K. S. (2010). Developing critical and historical thinking skills",
+      "Brush, T., & Saye, J. (2008). The effects of multimedia-supported problem-based inquiry",
+      "Lee, J. K. (2002). Digital history in the history/social studies classroom"
+    ]
+  },
+  {
+    "id": 31,
+    "nome": "Histography",
+    "area": "História",
+    "categoria": "Linha do Tempo Interativa",
+    "descricao": "Visualização interativa da história mundial desde o Big Bang",
+    "facilidadeUso": 0.90,
+    "engajamentoPotencial": 0.90,
+    "adaptabilidadePedagogica": 0.75,
+    "requisitosInfraestrutura": 0.75,
+    "custoAcessibilidade": 1.0,
+    "tags": ["introducao", "investigativo", "expositivo"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador", "celular"],
+    "avaliacao": false,
+    "offline": false,
+    "referencias": [
+      "Haydn, T. (2011). History teaching and ICT",
+      "Schrum, L., et al. (2007). Web 2.0 and the changing context",
+      "Levstik, L. S., & Barton, K. C. (2010). Doing history"
+    ]
+  },
+  {
+    "id": 32,
+    "nome": "Europeana",
+    "area": "História",
+    "categoria": "Biblioteca Digital Histórica",
+    "descricao": "Acesso a milhões de documentos históricos, fotos e artefatos digitalizados",
+    "facilidadeUso": 0.80,
+    "engajamentoPotencial": 0.75,
+    "adaptabilidadePedagogica": 0.80,
+    "requisitosInfraestrutura": 0.70,
+    "custoAcessibilidade": 1.0,
+    "tags": ["investigativo", "projetos", "autonomia"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador"],
+    "avaliacao": false,
+    "offline": false,
+    "referencias": [
+      "Purday, J. (2009). Think culture: Europeana.eu from concept to construction",
+      "Navarrete, T. (2014). Digital cultural heritage",
+      "Terras, M. (2011). The digital humanities and the transcending of mortality"
+    ]
+  },
+  {
+    "id": 33,
+    "nome": "History Pin",
+    "area": "História",
+    "categoria": "Mapeamento Histórico",
+    "descricao": "Plataforma para compartilhar fotos e histórias em mapas históricos",
+    "facilidadeUso": 0.85,
+    "engajamentoPotencial": 0.85,
+    "adaptabilidadePedagogica": 0.80,
+    "requisitosInfraestrutura": 0.70,
+    "custoAcessibilidade": 1.0,
+    "tags": ["projetos", "pratica", "investigativo"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador", "celular"],
+    "avaliacao": false,
+    "offline": false,
+    "referencias": [
+      "Grever, M., et al. (2011). Beyond the canon: History education in the twenty-first century",
+      "Seixas, P., & Morton, T. (2013). The Big Six Historical Thinking Concepts",
+      "Wineburg, S. (2001). Historical thinking and other unnatural acts"
+    ]
+  },
+  {
+    "id": 34,
+    "nome": "Socrative",
+    "area": "Multidisciplinar",
+    "categoria": "Avaliações e Quizzes Formativos",
+    "descricao": "Sistema de resposta de alunos para avaliações em tempo real",
+    "facilidadeUso": 0.90,
+    "engajamentoPotencial": 0.80,
+    "adaptabilidadePedagogica": 0.85,
+    "requisitosInfraestrutura": 0.70,
+    "custoAcessibilidade": 0.90,
+    "tags": ["revisao", "pratica", "expositivo"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["celular", "computador"],
+    "avaliacao": true,
+    "offline": false,
+    "referencias": [
+      "Wash, P. D. (2014). Taking advantage of mobile devices",
+      "Dervan, P. (2014). Enhancing in-class student engagement using Socrative",
+      "Awedh, M., et al. (2014). Using Socrative and smartphones for formative assessment"
+    ]
+  },
+  {
+    "id": 35,
+    "nome": "Kahoot!",
+    "area": "Multidisciplinar",
+    "categoria": "Gamificação e Quiz Interativo",
+    "descricao": "Quizzes competitivos em tempo real com ranking e pontuação",
+    "facilidadeUso": 0.95,
+    "engajamentoPotencial": 0.95,
+    "adaptabilidadePedagogica": 0.75,
+    "requisitosInfraestrutura": 0.70,
+    "custoAcessibilidade": 0.85,
+    "tags": ["revisao", "expositivo", "hibrido"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["celular", "computador"],
+    "avaliacao": true,
+    "offline": false,
+    "referencias": [
+      "Wang, A. I., & Tahir, R. (2020). The effect of using Kahoot! for learning",
+      "Licorish, S. A., et al. (2018). Students' perception of Kahoot!",
+      "Plump, C. M., & LaRosa, J. (2017). Using Kahoot! in the classroom"
+    ]
+  },
+  {
+    "id": 36,
     "nome": "Mentimeter",
     "area": "Multidisciplinar",
-    "categoria": "Enquetes em Tempo Real",
+    "categoria": "Enquetes e Feedback em Tempo Real",
     "descricao": "Perguntas interativas ao vivo com visualização instantânea de respostas",
     "facilidadeUso": 0.95,
     "engajamentoPotencial": 0.90,
@@ -122,14 +787,15 @@
     "offline": false,
     "referencias": [
       "Gökbulut, B. (2020). The effect of Mentimeter and Kahoot applications",
-      "Little, C. (2016). Innovative polling techniques"
+      "Little, C. (2016). Innovative polling techniques",
+      "Vallely, K., & Gibson, P. (2018). Engaging students on their devices"
     ]
   },
   {
-    "id": 7,
+    "id": 37,
     "nome": "Edpuzzle",
     "area": "Multidisciplinar",
-    "categoria": "Vídeos Interativos",
+    "categoria": "Vídeos Educacionais Interativos",
     "descricao": "Inserção de questões e comentários em vídeos com análise de dados",
     "facilidadeUso": 0.85,
     "engajamentoPotencial": 0.85,
@@ -142,36 +808,16 @@
     "avaliacao": true,
     "offline": false,
     "referencias": [
-      "Rackaway, C. (2012). Video killed the textbook star",
-      "Kay, R. H. (2012). Exploring the use of video podcasts"
+      "Rackaway, C. (2012). Video killed the textbook star?",
+      "Kay, R. H. (2012). Exploring the use of video podcasts",
+      "Hsin, W. J., & Cigas, J. (2013). Short videos improve student learning"
     ]
   },
   {
-    "id": 8,
-    "nome": "PhET Simulations",
-    "area": "Física/Química/Biologia",
-    "categoria": "Simulações Científicas",
-    "descricao": "Laboratórios virtuais para experimentação em física, química e biologia",
-    "facilidadeUso": 0.80,
-    "engajamentoPotencial": 0.90,
-    "adaptabilidadePedagogica": 0.85,
-    "requisitosInfraestrutura": 0.75,
-    "custoAcessibilidade": 1.0,
-    "tags": ["investigativo", "introducao", "pratica", "projetos"],
-    "modalidades": ["presencial", "hibrida", "remota"],
-    "dispositivos": ["computador"],
-    "avaliacao": false,
-    "offline": true,
-    "referencias": [
-      "Wieman, C. E., et al. (2008). PhET: Simulations that enhance learning",
-      "Perkins, K., et al. (2006). PhET interactive simulations"
-    ]
-  },
-  {
-    "id": 9,
+    "id": 38,
     "nome": "Padlet",
     "area": "Multidisciplinar",
-    "categoria": "Mural Colaborativo",
+    "categoria": "Mural Digital Colaborativo",
     "descricao": "Quadros virtuais para brainstorming, mapas mentais e projetos coletivos",
     "facilidadeUso": 0.95,
     "engajamentoPotencial": 0.85,
@@ -185,14 +831,15 @@
     "offline": false,
     "referencias": [
       "Fuchs, B. (2014). The writing is on the wall: Using Padlet",
-      "Rashid, A. A., et al. (2019). The influence of Padlet"
+      "Rashid, A. A., et al. (2019). The influence of Padlet on student engagement",
+      "Weller, T. (2013). Using Padlet as a collaborative tool"
     ]
   },
   {
-    "id": 10,
+    "id": 39,
     "nome": "Quizlet",
     "area": "Multidisciplinar",
-    "categoria": "Flashcards e Memorização",
+    "categoria": "Flashcards e Jogos de Memorização",
     "descricao": "Cartões de estudo com repetição espaçada e modos de jogo",
     "facilidadeUso": 0.90,
     "engajamentoPotencial": 0.80,
@@ -206,7 +853,250 @@
     "offline": true,
     "referencias": [
       "Dizon, G. (2016). Quizlet in the EFL classroom",
-      "Sanosi, A. B. (2018). The effect of Quizlet on vocabulary acquisition"
+      "Sanosi, A. B. (2018). The effect of Quizlet on vocabulary acquisition",
+      "Barr, B. (2016). Checking the effectiveness of Quizlet"
+    ]
+  },
+  {
+    "id": 40,
+    "nome": "Nearpod",
+    "area": "Multidisciplinar",
+    "categoria": "Apresentações Interativas Síncronas",
+    "descricao": "Aulas interativas com atividades integradas e acompanhamento em tempo real",
+    "facilidadeUso": 0.80,
+    "engajamentoPotencial": 0.85,
+    "adaptabilidadePedagogica": 0.90,
+    "requisitosInfraestrutura": 0.65,
+    "custoAcessibilidade": 0.80,
+    "tags": ["expositivo", "pratica", "hibrido", "introducao"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador", "celular"],
+    "avaliacao": true,
+    "offline": false,
+    "referencias": [
+      "Sankey, M., & Hunt, L. (2013). Using technology to enable flipped classrooms",
+      "Beauchamp, G., & Kennewell, S. (2010). Interactivity in the classroom",
+      "Fisher, D., et al. (2012). Implementing RTI with English learners"
+    ]
+  },
+  {
+    "id": 41,
+    "nome": "Flipgrid",
+    "area": "Multidisciplinar",
+    "categoria": "Discussões em Vídeo Assíncronas",
+    "descricao": "Plataforma para discussões e apresentações em vídeo de forma assíncrona",
+    "facilidadeUso": 0.85,
+    "engajamentoPotencial": 0.80,
+    "adaptabilidadePedagogica": 0.85,
+    "requisitosInfraestrutura": 0.70,
+    "custoAcessibilidade": 1.0,
+    "tags": ["projetos", "pratica", "autonomia", "hibrido"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["celular", "computador"],
+    "avaliacao": false,
+    "offline": false,
+    "referencias": [
+      "Stoszkowski, J., & Collins, D. (2017). Using shared online blogs",
+      "Green, T. (2014). Flipped classrooms: An agenda for innovative marketing education",
+      "Miskam, N. N., & Saidalvi, A. (2019). The use of Flipgrid"
+    ]
+  },
+  {
+    "id": 42,
+    "nome": "Miro",
+    "area": "Multidisciplinar",
+    "categoria": "Quadro Branco Colaborativo Online",
+    "descricao": "Espaço de trabalho visual para colaboração em tempo real",
+    "facilidadeUso": 0.80,
+    "engajamentoPotencial": 0.85,
+    "adaptabilidadePedagogica": 0.90,
+    "requisitosInfraestrutura": 0.70,
+    "custoAcessibilidade": 0.80,
+    "tags": ["projetos", "pratica", "hibrido", "investigativo"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador", "celular"],
+    "avaliacao": false,
+    "offline": false,
+    "referencias": [
+      "Wang, Q. (2009). Design and evaluation of a collaborative learning environment",
+      "Stahl, G., et al. (2006). Computer-supported collaborative learning",
+      "Dillenbourg, P. (1999). What do you mean by collaborative learning?"
+    ]
+  },
+  {
+    "id": 43,
+    "nome": "Coggle",
+    "area": "Multidisciplinar",
+    "categoria": "Mapas Mentais Colaborativos",
+    "descricao": "Criação de mapas mentais e diagramas de forma colaborativa",
+    "facilidadeUso": 0.90,
+    "engajamentoPotencial": 0.80,
+    "adaptabilidadePedagogica": 0.85,
+    "requisitosInfraestrutura": 0.75,
+    "custoAcessibilidade": 0.90,
+    "tags": ["projetos", "pratica", "introducao", "investigativo"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador"],
+    "avaliacao": false,
+    "offline": false,
+    "referencias": [
+      "Buzan, T., & Buzan, B. (1996). The Mind Map Book",
+      "Novak, J. D., & Cañas, A. J. (2008). The Theory Underlying Concept Maps",
+      "Eppler, M. J. (2006). A comparison between concept maps and mind maps"
+    ]
+  },
+  {
+    "id": 44,
+    "nome": "Wakelet",
+    "area": "Multidisciplinar",
+    "categoria": "Curadoria de Conteúdo Digital",
+    "descricao": "Organização e compartilhamento de conteúdos educacionais",
+    "facilidadeUso": 0.85,
+    "engajamentoPotencial": 0.75,
+    "adaptabilidadePedagogica": 0.85,
+    "requisitosInfraestrutura": 0.70,
+    "custoAcessibilidade": 1.0,
+    "tags": ["projetos", "autonomia", "pratica"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador", "celular"],
+    "avaliacao": false,
+    "offline": false,
+    "referencias": [
+      "Bhargava, R., et al. (2015). Beyond viral: Introducing the civic media project",
+      "Dabbagh, N., & Kitsantas, A. (2012). Personal Learning Environments",
+      "Wheeler, S., et al. (2008). The good, the bad and the wiki"
+    ]
+  },
+  {
+    "id": 45,
+    "nome": "Genially",
+    "area": "Multidisciplinar",
+    "categoria": "Criação de Conteúdo Interativo",
+    "descricao": "Criação de apresentações, infográficos e materiais interativos",
+    "facilidadeUso": 0.80,
+    "engajamentoPotencial": 0.90,
+    "adaptabilidadePedagogica": 0.85,
+    "requisitosInfraestrutura": 0.70,
+    "custoAcessibilidade": 0.80,
+    "tags": ["projetos", "introducao", "pratica"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador"],
+    "avaliacao": false,
+    "offline": false,
+    "referencias": [
+      "Mayer, R. E. (2009). Multimedia Learning",
+      "Sweller, J. (2005). Implications of Cognitive Load Theory",
+      "Clark, R. C., & Mayer, R. E. (2016). E-Learning and the Science of Instruction"
+    ]
+  },
+  {
+    "id": 46,
+    "nome": "Scratch",
+    "area": "Multidisciplinar",
+    "categoria": "Programação Visual",
+    "descricao": "Linguagem de programação visual para criar jogos e animações",
+    "facilidadeUso": 0.75,
+    "engajamentoPotencial": 0.90,
+    "adaptabilidadePedagogica": 0.80,
+    "requisitosInfraestrutura": 0.70,
+    "custoAcessibilidade": 1.0,
+    "tags": ["projetos", "investigativo", "pratica"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador"],
+    "avaliacao": false,
+    "offline": true,
+    "referencias": [
+      "Resnick, M., et al. (2009). Scratch: Programming for all",
+      "Brennan, K., & Resnick, M. (2012). New frameworks for studying learning",
+      "Maloney, J., et al. (2010). The Scratch programming language"
+    ]
+  },
+  {
+    "id": 47,
+    "nome": "Plickers",
+    "area": "Multidisciplinar",
+    "categoria": "Avaliação com Cartões QR",
+    "descricao": "Sistema de resposta usando cartões impressos e câmera do celular",
+    "facilidadeUso": 0.85,
+    "engajamentoPotencial": 0.80,
+    "adaptabilidadePedagogica": 0.75,
+    "requisitosInfraestrutura": 0.80,
+    "custoAcessibilidade": 1.0,
+    "tags": ["revisao", "pratica", "expositivo"],
+    "modalidades": ["presencial"],
+    "dispositivos": ["celular"],
+    "avaliacao": true,
+    "offline": true,
+    "referencias": [
+      "Krause, M., et al. (2017). Plickers and the seamless formative assessment classroom",
+      "Wood, T. A., et al. (2017). The effectiveness of student response systems",
+      "Caldwell, J. E. (2007). Clickers in the large classroom"
+    ]
+  },
+  {
+    "id": 48,
+    "nome": "H5P",
+    "area": "Multidisciplinar",
+    "categoria": "Criação de Conteúdo Interativo",
+    "descricao": "Framework para criar conteúdo HTML5 interativo e reutilizável",
+    "facilidadeUso": 0.70,
+    "engajamentoPotencial": 0.85,
+    "adaptabilidadePedagogica": 0.90,
+    "requisitosInfraestrutura": 0.65,
+    "custoAcessibilidade": 1.0,
+    "tags": ["pratica", "introducao", "projetos"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador", "celular"],
+    "avaliacao": true,
+    "offline": false,
+    "referencias": [
+      "Maina, M., & Craft, B. (2016). Learning Analytics for Open Educational Resources",
+      "Buchem, I., & Hamelmann, H. (2010). Microlearning: a strategy for ongoing professional development",
+      "Wiley, D., & Hilton, J. (2018). Defining OER-enabled pedagogy"
+    ]
+  },
+  {
+    "id": 49,
+    "nome": "Duolingo",
+    "area": "Multidisciplinar",
+    "categoria": "Aprendizagem de Idiomas Gamificada",
+    "descricao": "Plataforma gamificada para aprendizado de idiomas estrangeiros",
+    "facilidadeUso": 0.95,
+    "engajamentoPotencial": 0.90,
+    "adaptabilidadePedagogica": 0.70,
+    "requisitosInfraestrutura": 0.75,
+    "custoAcessibilidade": 0.95,
+    "tags": ["autonomia", "pratica", "revisao"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["celular", "computador"],
+    "avaliacao": true,
+    "offline": true,
+    "referencias": [
+      "Vesselinov, R., & Grego, J. (2012). Duolingo effectiveness study",
+      "García Botero, G., et al. (2019). Duolingo for schools: Language learning through gamification",
+      "Hanus, M. D., & Fox, J. (2015). Assessing the effects of gamification"
+    ]
+  },
+  {
+    "id": 50,
+    "nome": "Anki",
+    "area": "Multidisciplinar",
+    "categoria": "Sistema de Repetição Espaçada",
+    "descricao": "Flashcards inteligentes com algoritmo de repetição espaçada",
+    "facilidadeUso": 0.75,
+    "engajamentoPotencial": 0.75,
+    "adaptabilidadePedagogica": 0.85,
+    "requisitosInfraestrutura": 0.80,
+    "custoAcessibilidade": 1.0,
+    "tags": ["revisao", "autonomia", "pratica"],
+    "modalidades": ["presencial", "hibrida", "remota"],
+    "dispositivos": ["computador", "celular"],
+    "avaliacao": true,
+    "offline": true,
+    "referencias": [
+      "Karpicke, J. D., & Roediger, H. L. (2008). The critical importance of retrieval for learning",
+      "Cepeda, N. J., et al. (2006). Distributed practice in verbal recall tasks",
+      "Dunlosky, J., et al. (2013). Improving students' learning with effective learning techniques"
     ]
   }
 ]

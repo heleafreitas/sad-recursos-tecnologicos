@@ -70,7 +70,7 @@ class SistemaRecomendacao:
         recursos_com_score.sort(key=lambda x: x['scoreFinal'], reverse=True)
         
         # ETAPA 6: Retorna top 10
-        ranking = recursos_com_score[:10]
+        ranking = recursos_com_score
         
         analises = self._gerar_analises(recursos_com_score, len(self.recursos), pesos)
         

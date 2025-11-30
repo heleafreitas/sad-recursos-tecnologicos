@@ -15,8 +15,8 @@ class Config:
     CORS_ORIGINS = ['http://localhost:3000', 'http://localhost:5000']
     
     # Recomendações
-    NUM_RECOMENDACOES = 10
-    NUM_CLUSTERS = 3  # K-Means clustering
+    NUM_RECOMENDACOES = 50
+    NUM_CLUSTERS = 6  # K-Means clustering
     
     # Pesos da Regressão (serão calculados dinamicamente)
     # Estes são valores padrão, mas serão substituídos pelos pesos da regressão
@@ -54,7 +54,10 @@ class Config:
     CLUSTER_NAMES = {
         0: "Ferramentas Iniciante-Friendly",
         1: "Ferramentas Avançadas",
-        2: "Ferramentas Colaborativas"
+        2: "Ferramentas de Gamificação",
+        3: "Ferramentas Colaborativas",
+        4: "Ferramentas de Laboratório Virtual",
+        5: "Ferramentas Multifuncionais"
     }
     
     # Máquina Learning
