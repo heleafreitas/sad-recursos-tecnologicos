@@ -1,10 +1,12 @@
 import { BookOpen, Check, ChevronLeft, ChevronRight, Settings, Users } from 'lucide-react';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 const Questionario = ({ onSubmit }) => {
   const [respostas, setRespostas] = useState({});
   const [loading, setLoading] = useState(false);
   const [etapaAtual, setEtapaAtual] = useState(0);
+  const scrollRef = useRef(null);
+  const executeScroll = () => scrollRef.current?.scrollIntoView({ behavior: 'smooth' });
 
   const questionario = {
     perfilProfessor: [
@@ -176,14 +178,14 @@ const Questionario = ({ onSubmit }) => {
   const proximaEtapa = () => {
     if (etapaAtual < secoes.length - 1) {
       setEtapaAtual(etapaAtual + 1);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      executeScroll();
     }
   };
 
   const etapaAnterior = () => {
     if (etapaAtual > 0) {
       setEtapaAtual(etapaAtual - 1);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      executeScroll();
     }
   };
 
@@ -312,6 +314,7 @@ const Questionario = ({ onSubmit }) => {
         </h2>
         
         <div className="h-115 overflow-y-auto space-y-6">
+          <div ref={scrollRef}></div>
           {secaoAtual.perguntas.map((pergunta) => (
             <div key={pergunta.id} className="border-b border-gray-200 pb-4 last:border-b-0">
               <label className="block text-gray-800 font-medium mb-3">
